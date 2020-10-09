@@ -1,0 +1,109 @@
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+// const ExtractTextWebpackPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+module.exports = {
+  entry: {
+    index: "./src/js/index.js",
+  },
+
+  output: {
+    // Output goes here
+    path: path.resolve(__dirname, "build"),
+    filename: "js/bundle.js",
+    // publicPath: "/build",
+  },
+
+  devServer: {
+    contentBase: "./build",
+  },
+
+  // mode: "development", // Production || Development || none
+
+  module: {
+    rules: [
+      {
+        // Rules goes here
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
+
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          "css-loader",
+          "sass-loader",
+        ],
+      },
+
+      {
+        test: /\.html$/,
+        use: ["html-loader"],
+      },
+
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "/",
+            },
+          },
+        ],
+        exclude: path.resolve(__dirname, "src/index.html"),
+      },
+
+      {
+        test: /\.(png|jpg|svg)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "img/",
+              publicPath: "img/",
+            },
+          },
+        ],
+      },
+
+      {
+        test: /\b-bg\b/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "css/img",
+              publicPath: "img/",
+            },
+          },
+        ],
+      },
+    ],
+  },
+
+  plugins: [
+    // Pluging goes here
+    new HtmlWebpackPlugin({
+      template: "src/index.html",
+      filename: "index.html",
+    }),
+
+    new CleanWebpackPlugin(),
+
+    new MiniCssExtractPlugin({
+      filename: "css/main.css",
+    }),
+  ],
+};

@@ -1,0 +1,48 @@
+.intro {
+  &__section {
+    background-image: linear-gradient(45deg, #190219c0, #190219c0),
+      url(../img/intro-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+
+  &__hero-text {
+    text-align: center;
+  }
+}
+
+.tagline {
+  &__section {
+    // padding: $section-padding 0;
+    background-color: color(color-dark-brown);
+    text-align: center;
+  }
+}
+
+.about-us {
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+
+    @include respond(md) {
+      text-align: left;
+    }
+  }
+}
+
+.steps {
+  &__details {
+    text-align: center;
+    padding: 8px;
+    img {
+      display: block;
+      width: 48px;
+      height: 48px;
+      margin: 8px auto;
+    }
+  }
+}

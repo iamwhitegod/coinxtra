@@ -1,0 +1,83 @@
+.heading {
+  font-weight: 700;
+  color: color(color-dark-brown);
+
+  &--primary {
+    font-size: font(font-heading-h1);
+    line-height: 120%;
+    letter-spacing: -1%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  &--neutral {
+    color: color(color-white);
+  }
+
+  &--secondary {
+    font-size: font(font-heading-h2);
+    line-height: 115.7%;
+    letter-spacing: -1%;
+  }
+
+  &--tertiary {
+    font-size: font(font-heading-h3);
+    line-height: auto;
+    letter-spacing: 1%;
+    font-weight: 800;
+  }
+
+  &--quad {
+    font-size: font(font-heading-h4);
+    font-weight: 800;
+    line-height: auto;
+    letter-spacing: 0%;
+  }
+
+  &--poly {
+    font-size: font(font-heading-h5);
+    text-transform: uppercase;
+    line-height: auto;
+    letter-spacing: 15%;
+  }
+}
+
+.body {
+  &--text {
+    font-size: font(font-body-text);
+    line-height: 150%;
+  }
+
+  &--text-strong {
+    font-size: font(font-body-strong-text);
+    font-weight: 700;
+  }
+
+  &--text-2 {
+    font-size: font(font-body-text-2);
+    line-height: 150%;
+    max-width: 483px;
+    margin: 0 auto;
+  }
+
+  &--text-strong-2 {
+    font-size: font(font-body-strong-text-2);
+    font-weight: bold;
+  }
+
+  &--neutral {
+    color: color(color-white);
+  }
+}
+
+.btn {
+  font-size: font(font-btn-text);
+  letter-spacing: 3%;
+  text-transform: uppercase;
+
+  &--2 {
+    font-size: font(font-btn-text);
+    font-weight: 400;
+    letter-spacing: 3%;
+  }
+}

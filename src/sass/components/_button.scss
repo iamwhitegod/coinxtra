@@ -1,0 +1,35 @@
+.btn {
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  @include gradient(color-light-green, color-cyan-blue);
+  cursor: pointer;
+  transition: all 0.3s;
+  color: color(color-white);
+
+  &--default {
+    padding: 24px 16px;
+  }
+
+  &--small {
+    padding: 16px;
+  }
+
+  &--ghost {
+    background: none;
+    border: 1px solid color(color-light-green);
+  }
+
+  &--full {
+    display: block;
+    width: 100%;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}

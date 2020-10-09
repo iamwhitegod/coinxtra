@@ -1,0 +1,42 @@
+.d-flex {
+  display: flex;
+}
+
+$margin: 8px;
+$padding: 8px;
+
+@for $i from 1 through 12 {
+  .uti-mb-#{$i} {
+    margin-bottom: $margin * $i;
+  }
+}
+
+@for $i from 1 through 12 {
+  .uti-mt-#{$i} {
+    margin-top: $margin * $i;
+  }
+}
+
+@for $i from 1 through 12 {
+  .uti-margin-#{$i} {
+    margin: $margin * $i;
+  }
+}
+
+@for $i from 1 through 12 {
+  .uti-pdin-#{$i} {
+    padding: $padding * $i;
+  }
+}
+
+@for $i from 1 through 12 {
+  .uti-pdtb-#{$i} {
+    padding: #{$padding * $i} 0;
+  }
+}
+
+@for $i from 1 through 12 {
+  .uti-pdlr-#{$i} {
+    padding: 0 #{$padding * $i};
+  }
+}

@@ -1,0 +1,43 @@
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include respond(sm) {
+    max-width: 540px;
+  }
+
+  @include respond(md) {
+    max-width: 720px;
+  }
+
+  @include respond(lg) {
+    max-width: 960px;
+  }
+
+  @include respond(xl) {
+    max-width: 1140px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include respond(md) {
+    // flex-wrap: nowrap;
+  }
+}
+
+[class^="col"] {
+  flex: 0 0 100%;
+  // background-color: color(color-light-green);
+
+  @include respond(md) {
+    flex: 1 0 23%;
+
+    &:not(:last-child) {
+      margin-right: 2%;
+    }
+  }
+}

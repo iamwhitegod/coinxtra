@@ -1,0 +1,61 @@
+.top-nav {
+  background-color: color(color-dark-brown);
+  max-width: 100%;
+}
+
+.navbar {
+  position: relative;
+  @include navigation;
+  background-color: #190219;
+  color: #ffffff;
+
+  &--primary {
+    @include respond(lg) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__item:hover > .drop-down__list {
+    display: flex;
+  }
+}
+
+.drop-down {
+  &__list {
+    display: none;
+    flex-direction: column;
+    min-width: fit-content;
+    list-style-type: none;
+    position: absolute;
+    top: 3.2rem;
+    right: -3.2rem;
+    background-color: color(color-white);
+    z-index: 100;
+  }
+
+  &__item {
+    min-width: max-content;
+    text-align: center;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: color(color-dark-brown);
+
+      a {
+        color: color(color-white);
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: color(dark-brown);
+  }
+}
+
+.chevron {
+  display: inline-block;
+  margin-left: 0.8rem;
+}

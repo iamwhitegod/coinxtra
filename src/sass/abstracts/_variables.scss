@@ -1,0 +1,38 @@
+$colors: (
+  color-dark-brown: #190219,
+  color-light-green: #00f5a0,
+  color-cyan-blue: #00d9f5,
+  // White Colors Shades
+  color-white: #ffffff,
+  color-dark-white: #f1f1f1,
+  // Grey Colors
+  color-grey-primary: #333333,
+  color-grey-secondary: #808080,
+  color-grey-tertiary: #b2b2b2,
+  //Accent Colors
+  color-danger: #fd8282,
+  color-warning: #ffc700,
+);
+
+//paddings size
+$section-padding: 6.375rem;
+
+//Font size
+$default-font: 16px;
+$default-font-2: 12.5px;
+$default-font-3: 9px;
+
+// Font mapping
+$fonts: (
+  default-font: 16px,
+  font-heading-h5: 12px,
+  font-heading-h4: 22px,
+  font-heading-h3: 26px,
+  font-heading-h2: 2.62rem,
+  font-heading-h1: 4.3rem,
+  font-body-text: 16px,
+  font-body-text-2: 20px,
+  font-body-strong-text: 16px,
+  font-body-strong-text-2: 20px,
+  font-btn-text: 16px,
+);

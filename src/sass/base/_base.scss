@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: $default-font-3;
+
+  @include respond(md) {
+    font-size: $default-font-2;
+  }
+
+  @include respond(lg) {
+    font-size: $default-font;
+  }
+}
+
+body {
+  background-color: color(color-dark-white);
+  font-family: "Open-sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  font-size: 16px;
+}
+
+[class$="__section"] {
+  padding: $section-padding 0;
+}
