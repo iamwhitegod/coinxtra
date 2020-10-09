@@ -44,18 +44,19 @@ $padding: 8px;
 // Complex grid system with sass loop
 
 $columns: 12;
+$mgr: 2%;
 
 @for $i from 1 through $columns {
   .col--#{$i} {
     flex: 0 0 100%;
-    background-color: yellow;
+    //background-color: yellow;
 
     &:not(:last-child) {
       margin-right: 0;
     }
 
     @include respond(md) {
-      flex: 0 0 100% / $columns * $i;
+      flex: 0 0 100% / $columns * $i - $mgr;
       &:not(:last-child) {
         margin-right: 2%;
       }

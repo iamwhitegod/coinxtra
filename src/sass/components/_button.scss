@@ -18,6 +18,11 @@
   &--ghost {
     background: none;
     border: 1px solid color(color-light-green);
+
+    &:hover {
+      @include gradient(color-light-green, color-cyan-blue);
+      border: none;
+    }
   }
 
   &--full {

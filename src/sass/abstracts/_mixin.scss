@@ -146,21 +146,6 @@
   }
 }
 
-// Complex grid system with sass loop
-
-$columns: 12;
-
-@for $i from 1 through $columns {
-  .col--#{$i} {
-    flex: 0 0 100% / $columns * $i;
-    background-color: yellow;
-
-    &:not(:last-child) {
-      margin-right: 2%;
-    }
-  }
-}
-
 // Media Query Manager and Breakpoints
 
 @mixin respond($breakpoint) {

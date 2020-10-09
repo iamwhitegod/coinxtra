@@ -46,3 +46,58 @@
     }
   }
 }
+
+.pricing {
+  &__caption {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 4.8rem;
+  }
+
+  &__plan {
+    background-color: color(color-dark-brown);
+    color: color(color-white);
+    border-radius: 8px;
+    text-align: center;
+    padding: 24px;
+  }
+
+  &__plan > * {
+    margin-bottom: 16px;
+  }
+
+  &__percentage {
+    display: block;
+    font-size: 32px;
+  }
+}
+
+.info {
+  &__details {
+    max-width: 327px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__content {
+    color: color(color-dark-brown);
+    margin-bottom: 26px;
+  }
+}
+
+.emperical-data {
+  &__section {
+    background-color: color(color-dark-brown);
+  }
+
+  &__data {
+    text-align: center;
+    color: color(color-white);
+    margin-bottom: 26px;
+
+    @include respond(md) {
+      margin-bottom: 0;
+    }
+  }
+}

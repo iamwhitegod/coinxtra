@@ -32,7 +32,7 @@
 
 [class^="col"] {
   flex: 0 0 100%;
-  // background-color: color(color-light-green);
+  //background-color: color(color-light-green);
 
   @include respond(md) {
     flex: 1 0 23%;

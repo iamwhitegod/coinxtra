@@ -1,0 +1,69 @@
+.testimonial {
+  &__section {
+    height: 450px;
+
+    @include respond(md) {
+      height: 61vh;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+
+    position: absolute;
+    box-shadow: 2px 4px 80px rgba($color: #cccccc, $alpha: 0.6);
+    border-radius: 8px;
+    width: 100%;
+    height: 425px;
+    animation: slideshow 20s linear infinite;
+  }
+
+  &__content {
+    text-align: center;
+    padding: 16px;
+  }
+}
+
+$animlist: 1 0s, 2 4s, 3 8s, 4 12s, 5 16s;
+
+@each $item in $animlist {
+  .testimonial__slide:nth-child(#{nth($item, 1)}) {
+    animation-delay: nth($item, 2);
+  }
+}
+
+@keyframes slideshow {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  2% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  18% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  20% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

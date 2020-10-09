@@ -1,0 +1,37 @@
+.footer {
+  &__section {
+    background-color: color(color-dark-brown);
+  }
+
+  &__desc {
+    color: color(color-white);
+    margin-bottom: 48px;
+
+    @include respond(md) {
+      margin-bottom: 0;
+      padding-right: 32px;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    margin-bottom: 48px;
+
+    @include respond(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: color(color-white);
+
+    &:hover {
+      color: color(color-light-green);
+    }
+  }
+}
