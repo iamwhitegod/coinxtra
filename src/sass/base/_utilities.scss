@@ -40,3 +40,25 @@ $padding: 8px;
     padding: 0 #{$padding * $i};
   }
 }
+
+// Complex grid system with sass loop
+
+$columns: 12;
+
+@for $i from 1 through $columns {
+  .col--#{$i} {
+    flex: 0 0 100%;
+    background-color: yellow;
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+
+    @include respond(md) {
+      flex: 0 0 100% / $columns * $i;
+      &:not(:last-child) {
+        margin-right: 2%;
+      }
+    }
+  }
+}
