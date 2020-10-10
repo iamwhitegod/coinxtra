@@ -126,6 +126,11 @@ module.exports = {
       filename: "forget.html",
     }),
 
+    new HtmlWebpackPlugin({
+      template: "src/password.html",
+      filename: "password.html",
+    }),
+
     new CleanWebpackPlugin(),
 
     new MiniCssExtractPlugin({

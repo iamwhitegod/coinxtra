@@ -63,3 +63,18 @@ $mgr: 2%;
     }
   }
 }
+
+.accent--color {
+  color: color(color-light-green);
+}
+
+.no--flex {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 25px;
+}
+
+.no--flex > * {
+  display: inline-block;
+}
