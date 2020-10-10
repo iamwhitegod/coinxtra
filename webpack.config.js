@@ -4,6 +4,16 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 // const ExtractTextWebpackPlugin = require("extract-text-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+let htmlPageNames = ["signup", "login", "forget"];
+let multipleHtmlPlugins = htmlPageNames.map((name) => {
+  return new HtmlWebpackPlugin({
+    template: `src/${name}.html`, // relative path to the HTML files
+    filename: `${name}.html`, // output HTML files
+    inject: true,
+    // chunks: ["index"], // respective JS files
+  });
+});
+
 module.exports = {
   entry: {
     index: "./src/js/index.js",
@@ -49,19 +59,20 @@ module.exports = {
         use: ["html-loader"],
       },
 
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-              outputPath: "/",
-            },
-          },
-        ],
-        exclude: path.resolve(__dirname, "src/index.html"),
-      },
+      // {
+      //   test: /\.html$/,
+      //   use: [
+      //     {
+      //       loader: "file-loader",
+      //       options: {
+      //         name: "[name].[ext]",
+      //         outputPath: "/",
+      //         // publicPath: "/",
+      //       },
+      //     },
+      //   ],
+      //   exclude: path.resolve(__dirname, "src/index.html"),
+      // },
 
       {
         test: /\.(png|jpg|svg)$/,
@@ -100,10 +111,25 @@ module.exports = {
       filename: "index.html",
     }),
 
+    new HtmlWebpackPlugin({
+      template: "src/signup.html",
+      filename: "signup.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "src/login.html",
+      filename: "login.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "src/forget.html",
+      filename: "forget.html",
+    }),
+
     new CleanWebpackPlugin(),
 
     new MiniCssExtractPlugin({
       filename: "css/main.css",
     }),
-  ],
+  ].concat(multipleHtmlPlugins),
 };
