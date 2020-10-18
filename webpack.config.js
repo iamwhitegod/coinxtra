@@ -131,6 +131,11 @@ module.exports = {
       filename: "password.html",
     }),
 
+    new HtmlWebpackPlugin({
+      template: "src/userdashboard.html",
+      filename: "userdashboard.html",
+    }),
+
     new CleanWebpackPlugin(),
 
     new MiniCssExtractPlugin({

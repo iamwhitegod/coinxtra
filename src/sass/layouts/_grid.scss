@@ -1,3 +1,5 @@
+///////////////////////////////////////////////////////////////////
+// Used to control max width dimension of content on the page
 .container {
   max-width: 100%;
   margin: 0 auto;
@@ -20,6 +22,8 @@
   }
 }
 
+////////////////////////////////////////////////////
+// rows are used as wrapper for columns
 .row {
   display: flex;
   justify-content: center;
@@ -30,6 +34,9 @@
   }
 }
 
+///////////////////////////////////////////////////////////
+// columns are used as bounding box of contents on the page
+
 [class^="col"] {
   flex: 0 0 100%;
   //background-color: color(color-light-green);
@@ -39,6 +46,121 @@
 
     &:not(:last-child) {
       margin-right: 2%;
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////
+// glo-container used as grid container for the dashboard
+
+.glo {
+  &-container {
+    color: color(color-white);
+  }
+
+  &-nav-bar {
+    background-color: color(color-dark-brown);
+  }
+
+  &-main {
+    position: relative;
+
+    @include respond(md) {
+      display: flex;
+    }
+  }
+
+  &-aside-menu {
+    display: none;
+    position: absolute;
+    // top: 59.44px;
+    width: 100%;
+    min-height: calc(100vh - 59.44px);
+    background-color: color(color-dark-brown);
+    transition: width 0.3s;
+
+    @include respond(md) {
+      display: block;
+      width: 102px;
+      min-height: calc(100vh - 82px);
+      background-color: color(color-dark-brown);
+
+      &:hover {
+        width: 300px;
+      }
+
+      &:hover .lb {
+        justify-content: flex-start;
+      }
+
+      &:hover .lb label {
+        display: block;
+        cursor: pointer;
+      }
+
+      &:hover .side-menu__icon {
+        margin-right: 16px;
+        cursor: pointer;
+      }
+
+      &:hover .side-menu__arrow {
+        position: absolute;
+        right: 16px;
+      }
+
+      &:hover .side-menu__top {
+        padding: 16px 60px;
+      }
+
+      &:hover .side-menu__bottom {
+        padding: 16px 60px;
+      }
+
+      &:hover .side-menu__link {
+        display: inline-block;
+      }
+    }
+
+    @include respond(lg) {
+      width: 300px;
+      background-color: color(color-dark-brown);
+      z-index: 10;
+    }
+  }
+
+  &-aside-menu__active {
+    display: block !important;
+  }
+
+  &-main-container {
+    flex: 1;
+    transition: all 0.3s;
+
+    @include respond(md) {
+      background-color: cyan;
+      flex: 1 0 calc(100% - 102px);
+      margin-left: 102px;
+    }
+
+    @include respond(lg) {
+      flex: 1 0 calc(100% - 300px);
+      margin-left: 300px;
+    }
+  }
+
+  &-footer {
+    background-color: color(color-dark-brown);
+    width: 100%;
+    transition: all 0.3s;
+
+    @include respond(md) {
+      width: calc(100% - 102px);
+      margin-left: 102px;
+    }
+
+    @include respond(lg) {
+      width: calc(100% - 300px);
+      margin-left: 300px;
     }
   }
 }

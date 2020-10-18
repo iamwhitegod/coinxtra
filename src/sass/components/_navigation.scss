@@ -21,7 +21,8 @@
     display: flex;
   }
 }
-
+/*****************************************************/
+// Styles rules for drop-down list items
 .drop-down {
   &__list {
     display: none;
@@ -58,4 +59,323 @@
 .chevron {
   display: inline-block;
   margin-left: 0.8rem;
+}
+
+/***************************************************/
+// STyles rules for the dashboard navigation
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+
+  @include respond(md) {
+    padding: 16px 60px;
+  }
+
+  &__logo {
+    img:nth-child(1) {
+      display: none;
+      @include respond(md) {
+        display: block;
+      }
+    }
+
+    img:nth-child(2) {
+      display: block;
+      width: 28px;
+      @include respond(md) {
+        display: none;
+      }
+    }
+  }
+
+  &__ham-menu {
+    @include respond(md) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    @include respond(md) {
+      flex: 0 0 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  &__menu span {
+    display: inline-block;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 36px;
+    }
+  }
+
+  &__user-photo {
+    width: 32px;
+    height: 32px;
+    border-radius: 30%;
+  }
+}
+
+// .nav-bar__notification:hover + .widget__notification-dropdown {
+//   display: block;
+// }
+
+/*****************************************************/
+//Styles rules for side bar multi-level navigation
+//
+.side-menu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // align-items: space-between;
+
+  &__top,
+  &__bottom {
+    padding: 16px;
+
+    @include respond(sm) {
+      padding: 16px 102px;
+    }
+
+    @include respond(md) {
+      padding: 16px;
+    }
+
+    @include respond(lg) {
+      padding: 16px 60px;
+    }
+  }
+
+  // &__top {
+  //   position: relative;
+  // }
+
+  // .active {
+  //   background-color: color(color-light-green);
+  // }
+
+  .lb {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    padding: 6px 12px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: color(color-light-green);
+    }
+
+    @include respond(md) {
+      justify-content: center;
+    }
+
+    @include respond(lg) {
+      justify-content: flex-start;
+    }
+
+    input {
+      display: none;
+    }
+
+    label {
+      font-size: 16px;
+      cursor: pointer;
+
+      @include respond(md) {
+        display: none;
+      }
+
+      @include respond(lg) {
+        display: block;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    // padding: 16px;
+    display: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin: 24px 0 24px 8px;
+
+    &:hover {
+      background-color: color(color-light-green);
+    }
+  }
+
+  &__link {
+    color: color(color-white);
+
+    @include respond(md) {
+      display: none;
+    }
+
+    @include respond(lg) {
+      display: inline-block;
+    }
+  }
+
+  &__icon {
+    margin-right: 16px;
+    cursor: pointer;
+
+    @include respond(md) {
+      margin-right: 0;
+      cursor: pointer;
+    }
+
+    @include respond(lg) {
+      margin-right: 16px;
+      cursor: pointer;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    right: 72px;
+
+    @include respond(lg) {
+      position: absolute;
+      right: 16px;
+    }
+  }
+}
+
+.open-menu ~ .side-menu__list {
+  display: block;
+}
+
+.active-menu {
+  background-color: color(color-light-green);
+}
+
+/*****************************************************/
+//Styles rules for widgets
+//
+
+.widget {
+  &__notification-dropdown {
+    display: none;
+    max-width: fit-content;
+    background-color: color(color-white);
+    border-radius: 4px;
+    position: absolute;
+    top: 82px;
+    right: 102px;
+    z-index: 100;
+    height: calc(64px * 3 + 52px);
+    overflow-y: scroll;
+  }
+
+  &__notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: color(color-dark-brown);
+  }
+
+  &__notification-list {
+    list-style: none;
+  }
+
+  &__notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      border-bottom: 2px solid #ddd;
+    }
+
+    &:hover {
+      background-color: color(color-dark-white);
+    }
+  }
+
+  &__notification-message {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px;
+    span {
+      color: color(color-dark-brown);
+      font-size: 12px;
+    }
+  }
+
+  &__notification-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: color(color-light-green);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  &__dropdown {
+    @extend .widget__notification-dropdown;
+    // display: block !important;
+    right: 4px;
+    height: fit-content !important;
+    // padding: 12px;
+
+    &-header {
+      @extend .widget__notification-header;
+      flex-direction: column;
+      padding: 12px;
+
+      button {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    // margin-top: 12px;
+    padding: 16px;
+    text-align: center;
+
+    &:hover {
+      background-color: color(color-light-green);
+    }
+
+    &:hover .widget__link {
+      color: color(color-white) !important;
+    }
+  }
+
+  &__link {
+    color: color(color-dark-brown);
+  }
 }

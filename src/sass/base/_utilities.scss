@@ -18,6 +18,18 @@ $padding: 8px;
 }
 
 @for $i from 1 through 12 {
+  .uti-mr-#{$i} {
+    margin-right: $margin * $i;
+  }
+}
+
+@for $i from 1 through 12 {
+  .uti-ml-#{$i} {
+    margin-left: $margin * $i;
+  }
+}
+
+@for $i from 1 through 12 {
   .uti-margin-#{$i} {
     margin: $margin * $i;
   }
@@ -75,6 +87,19 @@ $mgr: 2%;
   margin: 0 auto 25px;
 }
 
-.no--flex > * {
-  display: inline-block;
+.flex-dir-row {
+  flex-direction: row;
+  align-items: center;
 }
+
+.uti-dis {
+  display: block;
+}
+
+.uti-color-grey-ter {
+  color: color(color-grey-tertiary);
+}
+
+// .no--flex > * {
+//   display: inline-block;
+// }

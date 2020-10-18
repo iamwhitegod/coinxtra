@@ -9,11 +9,13 @@
 
 @import "layouts/grid";
 @import "layouts/footer";
+@import "layouts/main-content";
 
 @import "components/navigation";
 @import "components/button";
 @import "components/slideshow";
 @import "components/form";
+@import "components/swal";
 
 @import "pages/home";
 

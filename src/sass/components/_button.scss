@@ -15,6 +15,11 @@
     padding: 16px;
   }
 
+  &--xs {
+    padding: 12px;
+    font-size: 12px;
+  }
+
   &--ghost {
     background: none;
     border: 1px solid color(color-light-green);

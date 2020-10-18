@@ -35,3 +35,22 @@ a {
 [class$="__section"] {
   padding: $section-padding 0;
 }
+
+// ::-webkit-scrollbar-corner {
+//   border-radius: 50%;
+// }
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: color(color-dark-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: color(color-grey-tertiary);
+  border-radius: 30px;
+  // height: 40px;
+}
+
+// ::-webkit-scrollbar-button {
+//   background-color: color(color-dark-brown);
+// }
