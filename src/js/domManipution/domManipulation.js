@@ -16,7 +16,10 @@ export const domStrings = {
   hamMenu: document.querySelector(".nav-bar__ham-menu"),
   sideMenu: document.querySelector(".glo-aside-menu"),
   notification: document.querySelector('.nav-bar__notification'),
-  dropHamburger: document.querySelector('.nav-bar__hamburger-menu')
+  dropHamburger: document.querySelector('.nav-bar__hamburger-menu'),
+  tabSelected: document.querySelector(".tab__selected"),
+  tabContainer: document.querySelector(".tab__options-container"),
+  tabOptions: document.querySelectorAll(".tab__options")
 };
 
 if(navToggle) {
@@ -88,3 +91,19 @@ if(domStrings.dropHamburger) {
     document.querySelector(".widget__dropdown").classList.toggle("uti-dis")
   })
 }
+
+/**********************************
+ * tabSelection
+**************** */
+domStrings.tabSelected.addEventListener("click", () => {
+  domStrings.tabContainer.classList.toggle("active");
+})
+
+// console.log(domStrings.tabOptions)
+
+domStrings.tabOptions.forEach(option => {
+  option.addEventListener("click", () => {
+    domStrings.tabSelected.innerHTML = option.querySelector("label").innerHTML;
+    domStrings.tabContainer.classList.remove("active");
+  })
+})

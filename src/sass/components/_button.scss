@@ -35,6 +35,11 @@
     // width: 100%;
   }
 
+  &--width {
+    display: block;
+    max-width: 100%;
+  }
+
   &:hover {
     transform: translateY(-3px);
   }

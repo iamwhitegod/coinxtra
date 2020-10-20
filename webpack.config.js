@@ -136,6 +136,11 @@ module.exports = {
       filename: "userdashboard.html",
     }),
 
+    new HtmlWebpackPlugin({
+      template: "src/deposit.html",
+      filename: "deposit.html",
+    }),
+
     new CleanWebpackPlugin(),
 
     new MiniCssExtractPlugin({

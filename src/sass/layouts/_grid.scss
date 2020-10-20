@@ -60,6 +60,10 @@
 
   &-nav-bar {
     background-color: color(color-dark-brown);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 11;
   }
 
   &-main {
@@ -75,9 +79,12 @@
     position: absolute;
     // top: 59.44px;
     width: 100%;
-    min-height: calc(100vh - 59.44px);
+    height: 100vh;
+    position: fixed;
+    top: 0;
     background-color: color(color-dark-brown);
     transition: width 0.3s;
+    z-index: 1;
 
     @include respond(md) {
       display: block;
@@ -134,11 +141,16 @@
 
   &-main-container {
     flex: 1;
+    margin-top: 60px;
+    // border: 1px solid transparent;
     transition: all 0.3s;
 
     @include respond(md) {
-      background-color: cyan;
+      // background-color: cyan;
+      margin-top: 82px;
       flex: 1 0 calc(100% - 102px);
+      // height: calc(100vh - 82px);
+      // overflow-y: scroll;
       margin-left: 102px;
     }
 

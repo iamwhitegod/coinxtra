@@ -3,3 +3,488 @@
     padding: 16px;
   }
 }
+
+.user {
+  &__details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: color(color-dark-brown);
+
+    div:nth-child(1) {
+      margin-right: 12px;
+    }
+
+    div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // align-items: center;
+    }
+
+    span {
+      font-size: 16px;
+    }
+  }
+
+  &__avater {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: color(color-dark-brown);
+    color: color(color-white);
+    width: 48px;
+    height: 48px;
+    padding: 16px;
+    border-radius: 50%;
+  }
+
+  &__email {
+    margin-bottom: 8px;
+  }
+}
+
+/*******************************************************
+Dashboard Banner
+********/
+
+.banner {
+  background-image: linear-gradient(45deg, #190219c0, #190219c0),
+    url(../img/intro-bg.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 16px 0;
+}
+
+.grid {
+  color: color(color-dark-brown);
+  grid-column: 1 / -1;
+
+  &--1 {
+    @include respond(md) {
+      grid-column: 1 / 2;
+    }
+  }
+
+  &--2 {
+    @include respond(md) {
+      grid-column: 2 / 3;
+    }
+  }
+
+  &--3 {
+    @include respond(md) {
+      grid-column: 3 / 4;
+      grid-row: 1 / -1;
+    }
+  }
+
+  &--4 {
+    @include respond(md) {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+    }
+  }
+
+  // &--5{
+
+  // }
+}
+
+/*************************************************************
+Dashboard Content
+*/
+
+.dashboard {
+  &__card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+    grid-template-rows: min-content min-content;
+    grid-gap: 16px;
+  }
+
+  &__type {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    p {
+      margin: 16px 0;
+    }
+
+    @include respond(md) {
+      align-items: center;
+      flex-direction: row;
+
+      p {
+        flex: 0 0 65%;
+        margin: 0;
+      }
+    }
+  }
+
+  &__card-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 16px;
+
+    span {
+      width: 32px;
+      margin-right: 12px;
+    }
+  }
+
+  &__card-body {
+    margin-bottom: 16px;
+  }
+
+  &__card-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__card-icon {
+    // width: 32px;
+    // height: 32px;
+    margin-right: 16px;
+  }
+
+  &__acct-balance {
+    background-color: color(color-white);
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+
+    .acct-balance__title {
+      margin-bottom: 72px;
+    }
+  }
+}
+
+/*****************************************
+Styles used for account balance
+*/
+
+.account {
+  &-bal {
+    // justify-self: flex-start;
+    display: flex;
+    // justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  &-type,
+  &-balance {
+    display: block;
+  }
+
+  &-type {
+    margin-bottom: 16px;
+  }
+
+  &-btc-figure {
+    font-size: 48px;
+    font-weight: 600;
+  }
+}
+
+/*****************************************
+Styles used for tab
+*/
+
+.tab {
+  background-color: color(color-dark-brown);
+  margin: 16px 0;
+  padding: 16px 16px 0;
+  border-radius: 8px;
+
+  @include respond(md) {
+    max-width: 50%;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    @include respond(sm) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-right: 32px;
+    padding: 16px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: color(color-white);
+    }
+
+    &:hover .tab__link {
+      color: color(color-dark-brown);
+    }
+  }
+
+  &__link {
+    color: color(color-white);
+    text-transform: uppercase;
+    // margin-bottom: 12px;
+  }
+
+  &__item.active {
+    background-color: color(color-white);
+
+    .tab__link {
+      color: color(color-dark-brown);
+    }
+  }
+
+  &__body {
+    margin-bottom: 16px;
+    padding: 16px;
+    background-color: color(color-white);
+    border-radius: 8px;
+  }
+
+  &__sub-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include respond(md) {
+      flex-direction: row;
+    }
+  }
+
+  &__investment-plan {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid color(color-dark-brown);
+    border-radius: 8px;
+    padding: 12px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__investment-plan.active {
+    border: 1px solid color(color-light-green);
+  }
+
+  &__selected-plan {
+    margin-right: 12px;
+  }
+
+  &__available-plan {
+    display: flex;
+    flex-direction: column;
+    color: color(color-dark-brown);
+    // align-items: center;
+  }
+
+  &__investment-type {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  &__investment-min-amt {
+    font-size: 16px;
+  }
+
+  &__select-container {
+    margin-top: 24px;
+    margin-bottom: 28px;
+    p {
+      color: color(color-grey-tertiary);
+    }
+  }
+
+  &__selected {
+    color: color(color-dark-brown);
+  }
+
+  &__select-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__options-container.active {
+    max-height: fit-content;
+    opacity: 1;
+    overflow: visible;
+  }
+
+  &__options-container {
+    width: 100%;
+    background-color: color(color-dark-brown);
+    max-height: 0;
+    opacity: 0;
+
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
+  }
+
+  &__selected {
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid color(color-light-green);
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  &__selected::after {
+    content: "";
+    background-image: url(../img/chevron-down-brown-bg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    height: 100%;
+    width: 16px;
+    right: 24px;
+    top: 15px;
+
+    transition: all 0.2s;
+  }
+
+  &__options,
+  &__selected {
+    padding: 12px 24px;
+    cursor: pointer;
+  }
+
+  &__options:hover {
+    background-color: color(color-light-green);
+  }
+
+  &__options label {
+    cursor: pointer;
+  }
+
+  &__options .radio {
+    display: none;
+  }
+
+  &__amount {
+    flex: 0 0 48%;
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  &__amount input {
+    // flex: 0 0 50%;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid color(color-light-green);
+    margin-bottom: 16px;
+    position: relative;
+    padding: 12px 24px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__amount label {
+    font-size: 16px;
+    color: color(color-grey-tertiary);
+    margin-bottom: 16px;
+  }
+
+  &__btn {
+    display: flex;
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
+
+  &__btn button {
+    flex: 1;
+  }
+
+  // &__input {
+  //   font-size: 16px;
+  //   border-radius: 8px;
+  //   border: 1px solid color(color-light-green);
+  //   margin-bottom: 16px;
+  //   position: relative;
+  //   padding: 12px 24px;
+  //   cursor: pointer;
+  // }
+}
+
+/*****************************************************************************************
+Styles used for Deposit Account balance
+*/
+.acct {
+  &__balance {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__main-balance {
+    margin-bottom: 32px;
+    padding: 16px;
+    border: 1px solid color(color-light-green);
+    border-radius: 8px;
+
+    span {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 100.7%;
+      color: color(color-light-green);
+
+      @include respond(md) {
+        font-size: 68px;
+      }
+    }
+  }
+
+  &__profit {
+    padding: 16px;
+    border: 1px solid color(color-light-green);
+    border-radius: 8px;
+  }
+
+  &__profit-bal {
+    font-size: 42px;
+    font-weight: 700;
+    color: color(color-light-green);
+  }
+
+  &__profit-percentage {
+    font-size: 42px;
+    color: color(color-dark-brown);
+
+    @include respond(md) {
+      font-size: 68px;
+    }
+  }
+
+  &__withdrawal-due {
+    margin-top: 32px;
+  }
+}

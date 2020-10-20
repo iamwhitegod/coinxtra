@@ -14,6 +14,10 @@
     color: color(color-white);
   }
 
+  &--grey {
+    color: color(color-grey-tertiary);
+  }
+
   &--secondary {
     font-size: font(font-heading-h2);
     line-height: 115.7%;
