@@ -6,6 +6,11 @@
   box-shadow: 2px 2px 80px rgba($color: #cccccc, $alpha: 0.3);
   border-radius: 8px;
 
+  &-container {
+    max-width: 624px;
+    margin: 16px auto 0;
+  }
+
   &__group {
     display: flex;
     justify-content: center;

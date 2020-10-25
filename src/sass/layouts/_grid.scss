@@ -91,6 +91,7 @@
       width: 102px;
       min-height: calc(100vh - 82px);
       background-color: color(color-dark-brown);
+      overflow-y: auto;
 
       &:hover {
         width: 300px;

@@ -165,6 +165,65 @@ Dashboard Content
       margin-bottom: 72px;
     }
   }
+
+  /*******************************************
+  Dashboard Deposit history styles rules
+  */
+
+  &__deposit-history {
+    background-color: color(color-white);
+    padding: 16px;
+    border-radius: 8px;
+    max-width: 100%;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    padding: 16px;
+
+    &--hd {
+      @include gradient(color-light-green, color-cyan-blue);
+      max-width: 100%;
+
+      border-radius: 8px;
+    }
+  }
+
+  &__item {
+    display: block;
+    color: color(color-dark-brown);
+    flex: 0 0 calc(100% / 4);
+    font-size: 16px;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+
+    &--hd {
+      color: color(color-white);
+      background-color: color(color-dark-brown);
+    }
+  }
+
+  &__upgrade {
+    background-color: color(color-white);
+    max-width: 600px;
+    border-radius: 8px;
+    margin: 16px 0 0;
+    padding: 16px;
+  }
+
+  &__table {
+    overflow-x: auto;
+    margin-top: 16px;
+    border-radius: 8px;
+  }
 }
 
 /*****************************************
@@ -486,5 +545,76 @@ Styles used for Deposit Account balance
 
   &__withdrawal-due {
     margin-top: 32px;
+  }
+}
+
+/**********************************************************************************
+***********************************************************************************
+Upgrade Account
+*/
+
+.upgrade-plans {
+  padding: 48px;
+}
+
+.upgrade__plan {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+
+  div {
+    margin-right: 48px;
+  }
+
+  button {
+    align-self: center;
+  }
+}
+
+/**********************************************************************************
+***********************************************************************************
+Withdrawal 
+*/
+
+.withdrawal {
+  &__panel {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+
+    @include respond(md) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+
+  &__amount {
+    flex: 0 0 100%;
+    background-color: color(color-white);
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    @include respond(md) {
+      flex: 0 0 50%;
+      margin-bottom: 0;
+      // margin-right: 48px;
+    }
+  }
+
+  &__day {
+    flex: 0 0 100%;
+    background-color: color(color-white);
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    // margin-top: 16px;
+    @include respond(md) {
+      flex: 0 0 40%;
+    }
+  }
+
+  &__request {
+    margin-top: 16px;
+    // padding: 16px;
   }
 }

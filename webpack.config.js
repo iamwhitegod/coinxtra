@@ -141,6 +141,52 @@ module.exports = {
       filename: "deposit.html",
     }),
 
+    new HtmlWebpackPlugin({
+      template: "src/profile.html",
+      filename: "profile.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "src/security.html",
+      filename: "security.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "src/upgrade.html",
+      filename: "upgrade.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "src/withdrawal.html",
+      filename: "withdrawal.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "src/transaction.html",
+      filename: "transaction.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "src/helpcenter.html",
+      filename: "helpcenter.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "src/notfound.html",
+      filename: "notfound.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "src/terms.html",
+      filename: "terms.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "src/licience.html",
+      filename: "licience.html",
+    }),
+
+
     new CleanWebpackPlugin(),
 
     new MiniCssExtractPlugin({
