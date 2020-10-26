@@ -101,11 +101,11 @@
          </div>
 
          <ul class="widget__list">
-           <li class="widget__item"><a href="#" class="widget__link">My Profile</a></li>
-          <li class="widget__item"><a href="#" class="widget__link">Security</a></li>
-           <li class="widget__item"><a href="#" class="widget__link">Deposits</a></li>
-           <li class="widget__item"><a href="#" class="widget__link">Withdrawals</a></li>
-           <li class="widget__item"><a href="#" class="widget__link">Logout</a></li>
+           <li class="widget__item"><a href="./profile.html" class="widget__link">My Profile</a></li>
+          <li class="widget__item"><a href="./security.html" class="widget__link">Security</a></li>
+           <li class="widget__item"><a href="./deposit.html" class="widget__link">Deposits</a></li>
+           <li class="widget__item"><a href="./withdrawal.html" class="widget__link">Withdrawals</a></li>
+           <li class="widget__item"><a href="./login.html" class="widget__link">Logout</a></li>
          </ul>
        </div>
        <!-- Hamburger dropdown ends here -->
@@ -142,12 +142,12 @@
 
                   <li class="side-menu__item">
                     <span class="side-menu__icon"><img src="img/withdrawal.svg" alt="withdrawal icon"></span>
-                    <a href="#" class="side-menu__link">Withdrawal</a>
+                    <a href="./withdrawal.html" class="side-menu__link">Withdrawal</a>
                   </li>
 
                   <li class="side-menu__item">
                     <span class="side-menu__icon"><img src="img/history.svg" alt="history icon"></span>
-                    <a href="#" class="side-menu__link">Transaction log</a>
+                    <a href="./transaction.html" class="side-menu__link">Transaction log</a>
                   </li>
                 </ul>
               </div>
@@ -163,17 +163,17 @@
                 <ul class="side-menu__list">
                   <li class="side-menu__item">
                     <span class="side-menu__icon"><img src="img/user.svg" alt="user icon"></span>
-                    <a href="#" class="side-menu__link">My profile</a>
+                    <a href="./profile.html" class="side-menu__link">My profile</a>
                   </li>
 
                   <li class="side-menu__item">
                     <span class="side-menu__icon"><img src="img/security.svg" alt="security icon"></span>
-                    <a href="#" class="side-menu__link">Security</a>
+                    <a href="./security.html" class="side-menu__link">Security</a>
                   </li>
 
                   <li class="side-menu__item">
                     <span class="side-menu__icon"><img src="img/upgrade.svg" alt="upgrade icon"></span>
-                    <a href="#" class="side-menu__link">Upgrade</a>
+                    <a href="./upgrade.html" class="side-menu__link">Upgrade</a>
                   </li>
                 </ul>
               </div>
@@ -182,17 +182,21 @@
             <div class="side-menu__bottom">
               <div class="side-menu__menu">
                 <div class="lb">
-                  <input type="checkbox" name="checkbox" id="dashboard">
+                  <input type="checkbox" name="checkbox" id="helpcenter">
                   <span class="side-menu__icon"><img src="img/help center.svg" alt="help center icon"></span>
-                  <label for="dashboard" class="side-menu__category">Help Center</label>
+                  <a href="./helpcenter.html" class="side-menu__link">
+                    <label for="helpcenter" class="side-menu__category">Help Center</label>
+                  </a>
                 </div>
               </div>
     
               <div class="side-menu__menu">
                 <div class="lb">
-                  <input type="checkbox" name="checkbox" id="dashboard">
+                  <input type="checkbox" name="checkbox" id="logout">
                   <span class="side-menu__icon"><img src="img/logout.svg" alt="logout icon"></span>
-                  <label for="dashboard" class="side-menu__category">Logout</label>
+                  <a href="./login.html" class="side-menu__link">
+                    <label for="logout" class="side-menu__category">Logout</label>
+                  </a>
                 </div>
               </div>
             </div>
@@ -379,105 +383,42 @@
 
            <!-- Dashboard Deposit history starts here -->
            <div class="dashboard__deposit-history">
-             <ul class="dashboard__list dashboard__list--hd">
-               <li class="dashboard__item dashboard__item--hd">Date</li>
-               <li class="dashboard__item dashboard__item--hd">Transaction</li>
-               <li class="dashboard__item dashboard__item--hd">Trans ID</li>
-               <li class="dashboard__item dashboard__item--hd">Status</li>
-             </ul>
+            <div class="dashboard__table">
+              <table class="table">
+                <thead class="table__head">
+                  <tr class="table__row">
+                    <td>Date</td>
+                    <td>Transaction</td>
+                    <td>Trans ID</td>
+                    <td>Status</td>
+                  </tr>
+                </thead>
 
-             <ul class="dashboard__list">
-              <li class="dashboard__item">10/03/2020</li>
-              <li class="dashboard__item">Cash Deposit via Mastercard</li>
-              <li class="dashboard__item">ID342557</li>
-              <li class="dashboard__item success">Success</li>
-            </ul>
-          </div>
-           <!-- Dashboard Deposit history ends here -->
+                <tbody class="table__body">
+                  <tr class="table__row">
+                    <td>04/10/2020</td>
+                    <td>Cash Deposit via Mastercard</td>
+                    <td>ID342557</td>
+                    <td><div class="status success">
+                      <img src="img/checked rounded green.svg" alt="checked rounded icon">
+                      <span>Processed</span>
+                    </div></td>
+                  </tr>
 
-
-           <table id="example" class="display dataTable" style="min-width: 845px" role="grid" aria-describedby="example_info">
-            <thead>
-                <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 118px;">Name</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 183px;">Position</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 91px;">Office</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 37px;">Age</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 90px;">Start date</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 78px;">Salary</th></tr>
-            </thead>
-            <tbody>
-              <tr class="odd" role="row">
-                      <td class="sorting_1">Airi Satou</td>
-                      <td>Accountant</td>
-                      <td>Tokyo</td>
-                      <td>33</td>
-                      <td>2008/11/28</td>
-                      <td>$162,700</td>
-                  </tr><tr class="even" role="row">
-                      <td class="sorting_1">Angelica Ramos</td>
-                      <td>Chief Executive Officer (CEO)</td>
-                      <td>London</td>
-                      <td>47</td>
-                      <td>2009/10/09</td>
-                      <td>$1,200,000</td>
-                  </tr><tr class="odd" role="row">
-                      <td class="sorting_1">Ashton Cox</td>
-                      <td>Junior Technical Author</td>
-                      <td>San Francisco</td>
-                      <td>66</td>
-                      <td>2009/01/12</td>
-                      <td>$86,000</td>
-                  </tr><tr class="even" role="row">
-                      <td class="sorting_1">Bradley Greer</td>
-                      <td>Software Engineer</td>
-                      <td>London</td>
-                      <td>41</td>
-                      <td>2012/10/13</td>
-                      <td>$132,000</td>
-                  </tr><tr class="odd" role="row">
-                      <td class="sorting_1">Brenden Wagner</td>
-                      <td>Software Engineer</td>
-                      <td>San Francisco</td>
-                      <td>28</td>
-                      <td>2011/06/07</td>
-                      <td>$206,850</td>
-                  </tr><tr class="even" role="row">
-                      <td class="sorting_1">Brielle Williamson</td>
-                      <td>Integration Specialist</td>
-                      <td>New York</td>
-                      <td>61</td>
-                      <td>2012/12/02</td>
-                      <td>$372,000</td>
-                  </tr><tr class="odd" role="row">
-                      <td class="sorting_1">Bruno Nash</td>
-                      <td>Software Engineer</td>
-                      <td>London</td>
-                      <td>38</td>
-                      <td>2011/05/03</td>
-                      <td>$163,500</td>
-                  </tr><tr class="even" role="row">
-                      <td class="sorting_1">Caesar Vance</td>
-                      <td>Pre-Sales Support</td>
-                      <td>New York</td>
-                      <td>21</td>
-                      <td>2011/12/12</td>
-                      <td>$106,450</td>
-                  </tr><tr class="odd" role="row">
-                      <td class="sorting_1">Cara Stevens</td>
-                      <td>Sales Assistant</td>
-                      <td>New York</td>
-                      <td>46</td>
-                      <td>2011/12/06</td>
-                      <td>$145,600</td>
-                  </tr><tr class="even" role="row">
-                      <td class="sorting_1">Cedric Kelly</td>
-                      <td>Senior Javascript Developer</td>
-                      <td>Edinburgh</td>
-                      <td>22</td>
-                      <td>2012/03/29</td>
-                      <td>$433,060</td>
+                  <tr class="table__row">
+                    <td>09/10/2020</td>
+                    <td>Coin Deposit via BTC wallet</td>
+                    <td>$439.99</td>
+                    <td><div class="status pending">
+                      <img src="img/pending.svg" alt="pending icon">
+                      <span>Pending...</span>
+                    </div></td>
                   </tr>
                 </tbody>
-            <tfoot>
-                <tr><th rowspan="1" colspan="1">Name</th><th rowspan="1" colspan="1">Position</th><th rowspan="1" colspan="1">Office</th><th rowspan="1" colspan="1">Age</th><th rowspan="1" colspan="1">Start date</th><th rowspan="1" colspan="1">Salary</th></tr>
-            </tfoot>
-        </table>
-
+              </table>
+            </div>
+          </div>
+           <!-- Dashboard Deposit history ends here -->
         </main>
         <!--  main content container ends here-->
       </div>

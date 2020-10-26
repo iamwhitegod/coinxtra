@@ -15,7 +15,9 @@
   }
 
   &__icon {
+    transition: transform 0.2s;
     cursor: pointer;
+    transform: rotate(0);
   }
 
   &__icon.rotate {
