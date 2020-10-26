@@ -618,3 +618,87 @@ Withdrawal
     // padding: 16px;
   }
 }
+
+/**********************************************************************************
+***********************************************************************************
+Transaction logs
+*/
+.transaction {
+  &-logs {
+    margin-top: 16px;
+
+    .heading {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: color(color-white);
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+
+  &__item {
+    color: color(color-dark-brown);
+  }
+
+  &__type {
+    background-color: color(color-dark-brown);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+
+    span {
+      font-size: 16px;
+      font-weight: 700;
+      color: color(color-white);
+    }
+  }
+
+  &__card {
+    font-size: 16px;
+  }
+
+  &__pm,
+  &__status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+
+    img {
+      margin-right: 8px;
+    }
+  }
+
+  &__status {
+    span {
+      color: color(color-light-green);
+    }
+  }
+
+  &__status.pending {
+    span {
+      color: color(color-warning);
+    }
+  }
+
+  &__status.error {
+    span {
+      color: color(color-danger);
+    }
+  }
+
+  &__amount {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}

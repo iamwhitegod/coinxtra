@@ -19,7 +19,8 @@ export const domStrings = {
   dropHamburger: document.querySelector('.nav-bar__hamburger-menu'),
   tabSelected: document.querySelector(".tab__selected"),
   tabContainer: document.querySelector(".tab__options-container"),
-  tabOptions: document.querySelectorAll(".tab__options")
+  tabOptions: document.querySelectorAll(".tab__options"),
+  accordions: document.querySelectorAll(".terms__title")
 };
 
 if(navToggle) {
@@ -69,9 +70,11 @@ domStrings.activeMenu.forEach(menu => menu.addEventListener("click", colorLink))
 /**********************************
  * Mobile menu
 **************** */
-domStrings.hamMenu.addEventListener("click", () => {
-  domStrings.sideMenu.classList.toggle("glo-aside-menu__active");
-})
+if(domStrings.hamMenu) {
+  domStrings.hamMenu.addEventListener("click", () => {
+    domStrings.sideMenu.classList.toggle("glo-aside-menu__active");
+  })
+}
 
 
 /**********************************
@@ -95,15 +98,34 @@ if(domStrings.dropHamburger) {
 /**********************************
  * tabSelection
 **************** */
-domStrings.tabSelected.addEventListener("click", () => {
-  domStrings.tabContainer.classList.toggle("active");
-})
+if(domStrings.tabSelected) {
+  domStrings.tabSelected.addEventListener("click", () => {
+    domStrings.tabContainer.classList.toggle("active");
+  })
+}
 
 // console.log(domStrings.tabOptions)
 
-domStrings.tabOptions.forEach(option => {
-  option.addEventListener("click", () => {
-    domStrings.tabSelected.innerHTML = option.querySelector("label").innerHTML;
-    domStrings.tabContainer.classList.remove("active");
+if(domStrings.tabOptions) {
+  domStrings.tabOptions.forEach(option => {
+    option.addEventListener("click", () => {
+      domStrings.tabSelected.innerHTML = option.querySelector("label").innerHTML;
+      domStrings.tabContainer.classList.remove("active");
+    })
   })
-})
+}
+
+
+/**********************************
+ * accordion
+**************** */
+
+if(domStrings.accordions) {
+  domStrings.accordions.forEach(accordion => {
+    accordion.addEventListener("click", () => {
+      const icon = accordion.querySelector("span");
+      icon.classList.toggle("rotate")
+      accordion.nextElementSibling.classList.toggle("display")
+    })
+  })
+}

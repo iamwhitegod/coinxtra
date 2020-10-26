@@ -30,6 +30,14 @@
     }
   }
 
+  &--alt-color {
+    color: color(color-dark-brown);
+
+    &:hover {
+      color: color(color-white);
+    }
+  }
+
   &--full {
     display: inline-block;
     // width: 100%;

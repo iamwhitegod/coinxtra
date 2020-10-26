@@ -182,8 +182,8 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: "src/licience.html",
-      filename: "licience.html",
+      template: "src/licenses.html",
+      filename: "licenses.html",
     }),
 
 

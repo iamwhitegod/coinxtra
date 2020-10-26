@@ -1,0 +1,38 @@
+.terms {
+  margin-top: 48px;
+
+  &__accordion {
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: color(color-grey-tertiary);
+    padding: 16px;
+    border-radius: 4px;
+  }
+
+  &__icon {
+    cursor: pointer;
+  }
+
+  &__icon.rotate {
+    transition: transform 0.2s;
+    transform: rotate(45deg);
+  }
+
+  &__body {
+    transition: all 0.2s;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  &__body.display {
+    transition: all 0.2s;
+    max-height: fit-content;
+    overflow: visible;
+    padding: 16px;
+  }
+}

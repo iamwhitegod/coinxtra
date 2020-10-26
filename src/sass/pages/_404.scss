@@ -1,0 +1,44 @@
+.error {
+  &__page {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 48px 16px;
+    text-align: center;
+
+    @include respond(md) {
+      padding: 96px;
+    }
+
+    .heading {
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__btns {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include respond(md) {
+      flex-direction: row;
+    }
+
+    button {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+
+        @include respond(md) {
+          margin-right: 16px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
