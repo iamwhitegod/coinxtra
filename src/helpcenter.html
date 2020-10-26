@@ -6,7 +6,7 @@
 
     <!-- boxicons icon CDN -->
     <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <title>Coinxtra | Dashboard</title>
+    <title>Coinxtra | Help Center</title>
   </head>
   <body>
     <!-- Dashboard grid container starts here -->
@@ -120,9 +120,11 @@
                 <div class="lb active-menu">
                   <input type="checkbox" name="checkbox" id="dashboard">
                   <span class="side-menu__icon"><img src="img/dashboard.svg" alt="dashboard icon"></span>
-                  <a href="./userdashboard.html" class="side-menu__link">
-                    <label for="dashboard" class="side-menu__category">Dashboard</label>
-                  </a>
+                  <label for="dashboard" class="side-menu__category">
+                    <a href="./userdashboard.html" class="side-menu__link">
+                      Dashboard
+                    </a>
+                  </label>
                 </div>
               </div>
 
@@ -184,9 +186,11 @@
                 <div class="lb">
                   <input type="checkbox" name="checkbox" id="helpcenter">
                   <span class="side-menu__icon"><img src="img/help center.svg" alt="help center icon"></span>
-                  <a href="./helpcenter.html" class="side-menu__link">
-                    <label for="helpcenter" class="side-menu__category">Help Center</label>
-                  </a>
+                  <label for="helpcenter" class="side-menu__category">
+                    <a href="./helpcenter.html" class="side-menu__link">
+                      Help Center
+                    </a>
+                  </label>
                 </div>
               </div>
     
@@ -194,9 +198,11 @@
                 <div class="lb">
                   <input type="checkbox" name="checkbox" id="logout">
                   <span class="side-menu__icon"><img src="img/logout.svg" alt="logout icon"></span>
-                  <a href="./login.html" class="side-menu__link">
-                    <label for="logout" class="side-menu__category">Logout</label>
-                  </a>
+                  <label for="logout" class="side-menu__category">
+                    <a href="./login.html" class="side-menu__link">
+                      Logout
+                    </a>
+                  </label>
                 </div>
               </div>
             </div>
@@ -206,7 +212,24 @@
   
         <!-- main content container starts here -->
         <main class="glo-main-container">
-          
+          <div class="main-container__container">
+            <section class="helpcenter">
+              <h2 class="heading heading--secondary uti-mb-2"> What can we do for you?</h2>
+              <p class="body--text color-dark-brown uti-mb-1"> Coinxtra is here to meet your needs</p>
+              <p class="body--text color-dark-brown"> Here at Coinxtra, we've been building our 
+                service reputation since 2015. We're dedicated to making our customers happy. If you 
+                have a question or concern, you've come to the right place. Chat with a live human, or contact us with our email. 
+                Our resources are available 24/7.
+              </p>
+            </section>
+
+            <section class="helpcenter__live-chat">
+              <div class="helpcenter__help">
+                <p class="body--text color-dark-brown uti-mb-1">Need help? We're always here for you.</p>
+                <button class="btn btn--default">Chat with a live Person</button>
+              </div>
+            </section>
+          </div>
         </main>
         <!--  main content container ends here-->
       </div>

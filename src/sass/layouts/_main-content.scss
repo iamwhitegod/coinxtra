@@ -641,10 +641,32 @@ Transaction logs
     background-color: color(color-white);
     border-radius: 8px;
     margin-bottom: 16px;
+    flex-direction: column;
+
+    @include respond(md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   &__item {
+    // width: 100%;
+    text-align: center;
     color: color(color-dark-brown);
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid color(color-grey-tertiary);
+
+      @include respond(md) {
+        width: none;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        border-bottom: none;
+        text-align: none;
+      }
+    }
   }
 
   &__type {
@@ -655,6 +677,11 @@ Transaction logs
     justify-content: center;
     align-items: center;
     border-radius: 4px;
+    margin: 0 auto;
+
+    @include respond(md) {
+      margin: 0;
+    }
 
     span {
       font-size: 16px;
@@ -700,5 +727,23 @@ Transaction logs
   &__amount {
     font-size: 16px;
     font-weight: 700;
+  }
+}
+
+/**********************************************************************************
+***********************************************************************************
+Help Center
+*/
+
+.helpcenter {
+  padding: 46px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+
+  &__live-chat {
+    margin-top: 100px;
+    text-align: center;
   }
 }
