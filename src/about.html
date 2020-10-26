@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coinxtra | Login to account</title>
+    <title>Coinxtra About</title>
+
+    <!-- Bootstrap CDN -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    /> -->
   </head>
   <body>
     <!-- Header contains introductry content and navigational aids -->
@@ -45,8 +53,8 @@
                 <a class="navbar__link">077 1116 3128</a>
               </li>
               <li class="navbar__item">
-                <a href="./signup.html">
-                  <button class="btn btn--small">Create an Acccount</button>
+                <a href="./login.html">
+                  <button class="btn btn--small">login</button>
                 </a>
               </li>
             </ul>
@@ -80,7 +88,7 @@
                   </li>
 
                   <li class="drop-down__item">
-                    <a href="./login.html" class="drop-down__link">LOGIN</a>
+                    <a href="/login.html" class="drop-down__link">LOGIN</a>
                   </li>
                 </ul>
               </li>
@@ -104,75 +112,31 @@
           </nav>
         </div>
       </div>
-    </header>
-    <!-- Header ends here -->
 
-    <!-- Create an Account section starts here -->
-    <section class="create-account__section">
-      <div class="container">
-        <div class="form__caption">
-          <h4 class="heading heading--quad uti-mb-6">Login to Account</h4>
-        </div>
-        <div class="row">
-          <div class="col--6">
-            <form action="#" method="POST" class="form" autocomplete="off">
-              <!-- Form group starts here -->
-              <div class="form__group">
-                <label class="form__label" for="email">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  class="form__input"
-                  autocomplete="off"
-                  required
-                />
-                <small class="form__message">Message</small>
+      <!-- Introductory Hero section starts here-->
+      <div class="intro__section">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="intro__hero-text">
+                <h1 class="heading heading--primary heading--neutral uti-mb-4">
+                  About Coinxtra.
+                </h1>
+                <p class="body--text-2 body--neutral uti-mb-6">
+                  Coinxtra is a leading investment provider to financial market
+                professionals. Our technical strategies cover Bitcoin, equity,
+                commodities and fixed-income markets. Our market depth and
+                knowledge are attributed to our acquired experience on trading
+                floors of many banking institutions.
+                </p>
+                <button class="btn btn--default">Start Mining Now</button>
               </div>
-              <!-- form group ends here -->
-
-              <!-- Form group starts here -->
-              <div class="form__group">
-                <label class="form__label" for="password">Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  class="form__input"
-                  autocomplete="off"
-                  required
-                />
-                <small class="form__message">Message</small>
-              </div>
-              <!-- form group ends here -->
-
-              <div class="form__group">
-                <button
-                  type="submit"
-                  class="btn btn--default btn--full"
-                  id="submit"
-                >
-                  Login to Account
-                </button>
-              </div>
-
-              <div class="form__group no--flex">
-                <span class="form__link">I don't have an account?</span>
-                <a href="./signup.html" class="accent--color">Create Account</a>
-              </div>
-
-              <div class="form__group no--flex">
-                <span class="form__link">Click here to reset</span>
-                <a href="./forget.html" class="accent--color"
-                  >Forget Password</a
-                >
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Create an Account section ends here -->
+      <!-- Introductory Hero section ends here-->
+    </header>
 
     <!-- footer section starts here -->
     <footer class="footer__section">

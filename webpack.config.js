@@ -186,6 +186,11 @@ module.exports = {
       filename: "licenses.html",
     }),
 
+    new HtmlWebpackPlugin({
+      template: "src/about.html",
+      filename: "about.html",
+    }),
+
 
     new CleanWebpackPlugin(),
 
