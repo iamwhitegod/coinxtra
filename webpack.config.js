@@ -191,6 +191,11 @@ module.exports = {
       filename: "about.html",
     }),
 
+    new HtmlWebpackPlugin({
+      template: "src/modal.html",
+      filename: "modal.html",
+    }),
+
 
     new CleanWebpackPlugin(),
 
